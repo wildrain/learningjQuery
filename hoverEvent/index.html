@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>chapter 03</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	
+	
+</head>
+<body>
+
+
+	<dl>
+		<dt>What are your hours?</dt>
+		<dd>We are open 24/7.</dd>
+		<dt>What are your hours?</dt>
+		<dd>We are open 24/7.</dd>
+		<dt>What are your hours?</dt>
+		<dd>We are open 24/7.</dd>
+		<dt>What are your hours?</dt>
+		<dd>We are open 24/7.</dd>
+		<dt>What are your hours?</dt>
+		<dd>We are open 24/7.</dd>
+	</dl>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
+<script>
+
+(function() {
+	
+	var dd = $('dd');
+	
+
+	dd.filter(':nth-child(n+4)').addClass('hide');
+
+	$('dt').on('mouseenter',function(){
+		var $this = $(this);
+		$this
+			.next()
+				.slideDown()
+					.siblings('dd').slideUp();
+	});
+	
+})();
+
+
+</script>
+
+</body>
+</html>
